@@ -1,4 +1,4 @@
-package com.example.payroll;
+package com.example.hrpayroll;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
