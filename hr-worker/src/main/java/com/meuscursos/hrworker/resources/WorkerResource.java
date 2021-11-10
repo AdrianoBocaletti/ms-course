@@ -35,6 +35,19 @@ public class WorkerResource {
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Worker> findById(@PathVariable Long id) {
 		
+		/*Inserindo comando apenas pra forçar um erro. Utilizado para ver o funcionamento do hystrix*/
+//		int x = 1;
+//		if (x == 1)
+//			throw new RuntimeException("Teste");
+		
+		/*try {
+			//utilizando este comando para forçar um erro de TimeOut. Pois por padrão, balanceamento de carga com Ribbon, tem o tempo de 1 segundo (1000L)
+			Thread.sleep(3000L); //pausando por 3 segundos, para depois responder a requisição.
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
 		logger.info("PORT = " + env.getProperty("local.server.port") );
 		
 		Worker obj = repository.findById(id).get();
