@@ -40,13 +40,13 @@ public class WorkerResource {
 //		if (x == 1)
 //			throw new RuntimeException("Teste");
 		
-		/*try {
+		try {
 			//utilizando este comando para forçar um erro de TimeOut. Pois por padrão, balanceamento de carga com Ribbon, tem o tempo de 1 segundo (1000L)
 			Thread.sleep(3000L); //pausando por 3 segundos, para depois responder a requisição.
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 		
 		logger.info("PORT = " + env.getProperty("local.server.port") );
 		
